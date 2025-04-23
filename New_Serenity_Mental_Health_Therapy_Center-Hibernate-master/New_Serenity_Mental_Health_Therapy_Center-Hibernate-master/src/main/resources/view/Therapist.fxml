@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="703.0" prefWidth="1290.0" style="-fx-background-color: #D3D3D3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.project.mentalHealthTherapyCenter.controller.TherapistController">
+   <children>
+      <Label layoutX="15.0" layoutY="365.0" text="Details of Doctors ">
+         <font>
+            <Font name="Georgia Bold" size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="12.0" layoutY="20.0" onMouseClicked="#TableAction" prefHeight="331.0" prefWidth="1266.0">
+        <columns>
+          <TableColumn fx:id="tableId" prefWidth="103.20001411437988" text="ID" />
+          <TableColumn fx:id="tableName" prefWidth="151.99996185302734" text="Name" />
+            <TableColumn fx:id="tableQualifications" prefWidth="226.39996337890625" text="Qualifications" />
+            <TableColumn fx:id="tableAvailable" prefWidth="269.6000061035156" text="Availability" />
+            <TableColumn fx:id="tableContact" prefWidth="252.0" text="Contact no" />
+            <TableColumn fx:id="tableMail" prefWidth="263.99993896484375" text="E-mail" />
+        </columns>
+      </TableView>
+      <Line endX="1157.800048828125" endY="-3.0517578125E-5" layoutX="115.0" layoutY="391.0" startX="-100.0" strokeWidth="2.0" />
+      <Label layoutX="16.0" layoutY="414.0" text="Doctor ID">
+         <font>
+            <Font name="Georgia Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="451.0" text="Name">
+         <font>
+            <Font name="Georgia Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="427.0" layoutY="451.0" text="Email">
+         <font>
+            <Font name="Georgia Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="419.0" layoutY="414.0" text="Contact">
+         <font>
+            <Font name="Georgia Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="807.0" layoutY="414.0" text="Qualifications">
+         <font>
+            <Font name="Georgia Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="docName" layoutX="151.0" layoutY="448.0" prefHeight="26.0" prefWidth="207.0" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
+      <TextField fx:id="docMail" layoutX="541.0" layoutY="448.0" prefHeight="26.0" prefWidth="207.0" promptText="example@gmail.com" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
+      <TextField fx:id="docContact" layoutX="541.0" layoutY="409.0" prefHeight="26.0" prefWidth="207.0" promptText="077-xxxxxxx" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
+      <Button fx:id="save" layoutX="34.0" layoutY="553.0" mnemonicParsing="false" onAction="#saveBtnAction" prefHeight="41.0" prefWidth="128.0" style="-fx-background-radius: 12; -fx-background-color: #4C8C8C;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow>
+               <input>
+                  <Glow />
+               </input>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button fx:id="update" layoutX="214.0" layoutY="553.0" mnemonicParsing="false" onAction="#updateBtnAction" prefHeight="41.0" prefWidth="128.0" style="-fx-background-radius: 12; -fx-background-color: #4C8C8C;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow>
+               <input>
+                  <Glow />
+               </input>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button fx:id="delete" layoutX="397.0" layoutY="553.0" mnemonicParsing="false" onAction="#deleteBtnAction" prefHeight="41.0" prefWidth="128.0" style="-fx-background-radius: 12; -fx-background-color: #4C8C8C;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow>
+               <input>
+                  <Glow />
+               </input>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button fx:id="reset" layoutX="581.0" layoutY="553.0" mnemonicParsing="false" onAction="#resetBtnAction" prefHeight="41.0" prefWidth="128.0" style="-fx-background-radius: 12; -fx-background-color: #4C8C8C;" text="Reset" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow>
+               <input>
+                  <Glow />
+               </input>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Label layoutX="261.0" layoutY="652.0" text=" Therapist Details of Serinity Mental Health Therapy Center " textFill="#408181">
+         <font>
+            <Font name="Georgia Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="image" fitHeight="61.0" fitWidth="103.0" layoutX="883.0" layoutY="621.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+<!--            <Image url="@../../../../../../../Pictures/Mental%20Hospital/icons8-doctor-50.png" />-->
+         </image>
+      </ImageView>
+      <Label fx:id="docIDlabel" layoutX="214.0" layoutY="414.0" text="Doctor ID">
+         <font>
+            <Font name="Georgia Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="docQualificationsCombo" layoutX="969.0" layoutY="411.0" prefHeight="26.0" prefWidth="243.0" promptText="bachelores/masters/doctoral degree" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
+      <ComboBox fx:id="docAvailableCombo" layoutX="1004.0" layoutY="448.0" prefHeight="26.0" prefWidth="207.0" style="-fx-background-color: transparent; -fx-border-color: black; -fx-border-width: 0 0 1px 0;" />
+      <Label layoutX="835.0" layoutY="451.0" text="Availability">
+         <font>
+            <Font name="Georgia Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="viewActivities" layoutX="761.0" layoutY="553.0" mnemonicParsing="false" onAction="#viewActivitiesBtnAction" prefHeight="42.0" prefWidth="152.0" style="-fx-background-radius: 12; -fx-background-color: #4C8C8C;" text="View Activities" textFill="WHITE">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow>
+               <input>
+                  <Glow />
+               </input>
+            </DropShadow>
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
